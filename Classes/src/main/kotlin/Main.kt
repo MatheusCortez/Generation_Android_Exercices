@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
     contaCorrente.proprietario="Matheus"
     contaCorrente.saldo=2500.00
     contaCorrente.tipo=1
-   println( contaCorrente.proprietario)
+    println( contaCorrente.proprietario)
 
     contaCorrente.saldo()
     val contaPoupanca = Conta()

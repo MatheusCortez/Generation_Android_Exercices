@@ -1,11 +1,11 @@
 class Conta {
-     var proprietario:String=""
-       get()= field.uppercase()
+    var proprietario:String=""
+        get()= field.uppercase()
     var saldo:Double=0.0
     var tipo =1
-    set(valor)= if(valor<=0){
-        println("Tipo de conta invalido")
-    }
+        set(valor)= if(valor<=0){
+            println("Tipo de conta invalido")
+        }
 
 
     fun saldo (){

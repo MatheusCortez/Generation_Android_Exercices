@@ -1,3 +1,3 @@
 
-rootProject.name = "Classes"
+rootProject.name = "classes"
 
