@@ -2,7 +2,9 @@ package Cursos
 
 import Estudante.Estudante
 
-class Cursos (val nomeCurso:String, var professorName:String, val ano:Int) {
+class Cursos (private val nomeCurso:String,
+              private  var professorName:String,
+              private val ano:Int) {
     val listaDeEstudante = mutableListOf<Estudante?>()
 
 
@@ -47,7 +49,13 @@ class Cursos (val nomeCurso:String, var professorName:String, val ano:Int) {
         println("A maior nota do curso foi $melhorNota")
     }
 
-
+    fun verificaAluno(estudante: Estudante){
+        if(listaDeEstudante.contains(estudante)){
+            println("Este Estudante existe ")
+        }else{
+            throw Exception("O aluno nao consta na lista ")
+        }
+    }
 
 }
 

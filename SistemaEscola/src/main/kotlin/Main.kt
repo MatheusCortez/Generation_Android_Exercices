@@ -14,4 +14,10 @@ fun main(args: Array<String>) {
     cursoIngles.cadastrar(caio)
     cursoIngles.numeroDeEstudantesCadastrados()
     cursoIngles.removerEstudante(caio)
+
+    try {
+        cursoIngles.verificaAluno(matheus)
+    }catch (e:Exception){
+        println(e.message)
+    }
 }
