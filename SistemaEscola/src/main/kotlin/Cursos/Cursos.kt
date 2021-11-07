@@ -23,7 +23,7 @@ class Cursos (private val nomeCurso:String,
                 listaDeEstudante+=i
             }
         }
-        println("Rodo papai")
+
     }
     fun removerEstudante(estudante:Estudante?){
         if(listaDeEstudante.contains(estudante)){

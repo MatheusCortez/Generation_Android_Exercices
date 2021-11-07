@@ -10,10 +10,11 @@ fun main(args: Array<String>) {
 
     val cursoIngles:Cursos = Cursos("Ingles","Genivaldo",1)
 
-    cursoIngles.cadastrar(matheus)
+
     cursoIngles.cadastrar(caio)
     cursoIngles.numeroDeEstudantesCadastrados()
     cursoIngles.removerEstudante(caio)
+    cursoIngles.listarEstudantes()
 
     try {
         cursoIngles.verificaAluno(matheus)
