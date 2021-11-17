@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">login_teste</string>
+    <string name="BemVindo">Bem vindo ao APP</string>
+    <string name="cadastre_se"><u>Cadastre se</u></string>
+</resources>
