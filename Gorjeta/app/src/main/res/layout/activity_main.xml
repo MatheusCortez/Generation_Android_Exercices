@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="32dp"
+    tools:context=".MainActivity">
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guidelineStart"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="32dp"
+
+      />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp"
+
+        />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/TxtLayoutValor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Insira o valor do servico"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/txtdescricaoAtendimento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Como foi o atendimento?"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toBottomOf="@id/TxtLayoutValor"
+            />
+            <RadioGroup
+                android:orientation="vertical"
+                android:id="@+id/rg_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toBottomOf="@id/txtdescricaoAtendimento"
+                android:layout_marginTop="16dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_opcaoIncrivel"
+                    android:text="Incivel (20%)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <RadioButton
+                    android:id="@+id/rb_opcaoBoa"
+                    android:text="Boa (15%)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+                <RadioButton
+                    android:id="@+id/rb_opcaoRegular"
+                    android:text="Regular (10%)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RadioGroup>
+
+    <Switch
+        android:id="@+id/sw_arredondar"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/rg_group"
+        android:text="Deseja arredondar a gorjeta?"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnCalcular"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        android:layout_margin="24dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Calcular"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/sw_arredondar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/valorGorjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/btnCalcular"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
