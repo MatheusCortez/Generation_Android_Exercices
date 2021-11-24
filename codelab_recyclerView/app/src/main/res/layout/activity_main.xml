@@ -5,12 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:scrollbars="vertical"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:orientation="vertical"
+        app:layout_constraintGuide_start="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         />
 
 
